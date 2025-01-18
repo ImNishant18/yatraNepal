@@ -1,0 +1,97 @@
+/* Custom styles for SecondaryNav */
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.title {
+    font-size: 60px;
+    /* Set heading size to 60px */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+    /* Add space below the heading */
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 9999px;
+    font-size: 20px;
+    /* Set nav menu font size to 20px */
+    font-weight: bold;
+    /* Set nav menu text to bold */
+    color: #4A5568;
+    /* Gray color */
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #000000;
+    /* Black color on hover */
+}
+
+.nav-item.active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    /* Highlight active nav item */
+}
+
+.search-container {
+    position: relative;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 9999px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+}
+
+.search-input {
+    width: 100%;
+    margin-left: 12px;
+    outline: none;
+    font-size: 16px;
+    color: #4A5568;
+    border: none;
+    background-color: transparent;
+    padding: 8px;
+}
+
+.search-input::placeholder {
+    color: #A0AEC0;
+}
+
+.search-button {
+    background-color: #38A169;
+    color: white;
+    font-size: 16px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #2F855A;
+}
