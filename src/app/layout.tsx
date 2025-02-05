@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header/page";
+import Header from "@/components/Header/Top Navigation/page";
+import ImageSlider from "@/components/Header/ImageSlider";
 import SecondaryNav from "@/components/Nishant/page";
 
 const geistSans = Geist({
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Header />
         <SecondaryNav />
+        <ImageSlider />
         {children}
       </body>
     </html>
