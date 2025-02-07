@@ -1,10 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { Globe, User } from "lucide-react"
+import { Globe} from "lucide-react"
 import Image from "next/image"
 import { useState, useRef } from "react"
-import "./header.css"
+import "./style.css"
 
 export default function Header() {
     const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
@@ -48,7 +48,7 @@ export default function Header() {
                                 ref={(el) => (submenuRefs.current[menu] = el!)}
                                 className="absolute left-0 mt-3 w-56 rounded-xl shadow-xl bg-white border z-50 p-4 text-black"
                                 style={{
-                                    boxShadow: "0 8px 20px rgba(0, 0, 0, 0.15)",
+                                    boxShadow: "0 8px 20px rgba(80, 68, 68, 0.85)",
                                     borderRadius: "12px",
                                 }}
                             >

@@ -1,5 +1,7 @@
+import ImageSlider from "@/components/Home/Image Slider/page";
+
 export default function Home() {
   return (
-    <h1>Nishant</h1>
+    <ImageSlider />
   );
 }
