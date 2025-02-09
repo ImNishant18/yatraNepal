@@ -19,24 +19,17 @@ export default function TouristGuideCard() {
                             priority
                         />
                     </div>
-                    {/* Content Container */}
                     <div className="flex-1 p-4 md:p-6">
                         <div className="flex flex-col md:flex-row gap-4 h-full">
-                            {/* Text Content */}
                             <div className="flex-1 space-y-3">
-                                {/* Sponsored Tag */}
                                 <div className="inline-block">
                                     <span className="bg-[#E8E8E8] text-sm px-3 py-1 rounded-full">
                                         Tourist Guide
                                     </span>
                                 </div>
-
-                                {/* Title */}
                                 <h1 className="text-2xl md:text-3xl font-bold">
                                     Hire Your Tourist Guide Here
                                 </h1>
-
-                                {/* Description */}
                                 <p className="text-gray-700">
                                     Embark on an unforgettable journey through the heart of our city with our expert-guided tour.
                                     Whether you're a history enthusiast, art lover, or culinary explorer, our tour offers something special for everyone....

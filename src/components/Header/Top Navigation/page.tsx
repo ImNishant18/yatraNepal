@@ -19,7 +19,7 @@ export default function Header() {
         <nav className="fixed-nav flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200">
             {/* Left section with logo */}
             <div className="flex items-center space-x-2">
-                <Link href="/" className="flex items-center gap-2" aria-label="Go to homepage">
+                <Link href="#" className="flex items-center gap-2" aria-label="Go to homepage">
                     <Image
                         src="/logo.png"
                         alt="YatraNepal Logo"
