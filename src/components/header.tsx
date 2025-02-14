@@ -3,15 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-    Globe,
-    Search,
-    Home,
-    Building2,
-    Palmtree,
-    UtensilsCrossed,
-    Plane,
-} from "lucide-react";
+import { Search, Home, Bed, Ticket, Utensils, Plane, HomeIcon as House, Globe } from "lucide-react"
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -212,54 +205,64 @@ export default function Header() {
 
                     {/* Secondary Navigation (only when not scrolled) */}
                     {!isScrolled && (
-                        <div className="secondary-nav bg-white py-8">
-                            <div className="container mx-auto px-4">
-                                <h2 className="text-7xl font-bold text-center mb-8">Where to?</h2>
+                        <div className="w-full max-w-6xl mx-auto px-4 py-8 space-y-8">
+                            <h1 className="text-7xl font-bold text-center font-poppins mb-8">Where to?</h1>
 
-                                <div className="flex flex-col items-center gap-8">
-                                    <div className="flex justify-center gap-8 w-full">
-                                        <Button variant="ghost" className="flex flex-col items-center font-poppins gap-1 hover:bg-gray-100 group w-32">
-                                            <Home className="h-6 w-6" />
-                                            <span className="group-hover:underline font-poppins text-xl text-center">Search All</span>
-                                        </Button>
-                                        <Button variant="ghost" className="flex flex-col items-center font-poppins gap-1 hover:bg-gray-100 group w-32">
-                                            <Building2 className="h-6 w-6" />
-                                            <span className="group-hover:underline font-poppins text-xl text-center">Hotels</span>
-                                        </Button>
-                                        <Button variant="ghost" className="flex flex-col items-center font-poppins gap-1 hover:bg-gray-100 group w-32">
-                                            <Palmtree className="h-6 w-6" />
-                                            <span className="group-hover:underline font-poppins text-xl text-center">Things to Do</span>
-                                        </Button>
-                                        <Button variant="ghost" className="flex flex-col items-center font-poppins gap-1 hover:bg-gray-100 group w-32">
-                                            <UtensilsCrossed className="h-6 w-6" />
-                                            <span className="group-hover:underline font-poppins text-xl text-center">Restaurants</span>
-                                        </Button>
-                                        <Button variant="ghost" className="flex flex-col items-center font-poppins gap-1 hover:bg-gray-100 group w-32">
-                                            <Plane className="h-6 w-6" />
-                                            <span className="group-hover:underline font-poppins text-xl text-center">Flights</span>
-                                        </Button>
-                                        <Button variant="ghost" className="flex flex-col items-center font-poppins gap-1 hover:bg-gray-100 group w-32">
-                                            <Home className="h-6 w-6" />
-                                            <span className="group-hover:underline font-poppins text-xl text-center">Vacation Rentals</span>
-                                        </Button>
-                                    </div>
+                            <nav className="flex flex-wrap justify-center gap-8">
+                                <button className="flex flex-col items-center gap-2 min-w-[100px] text-[16px] font-medium hover:underline transition-all">
+                                    <Home className="w-6 h-6" />
+                                    Search All
+                                </button>
+                                <Link
+                                    href="/hotels"
+                                    className="flex flex-col items-center gap-2 min-w-[100px] text-[16px] font-medium hover:underline transition-all"
+                                >
+                                    <Bed className="w-6 h-6" />
+                                    Hotels
+                                </Link>
+                                <Link
+                                    href="/things-to-do"
+                                    className="flex flex-col items-center gap-2 min-w-[100px] text-[16px] font-medium hover:underline transition-all"
+                                >
+                                    <Ticket className="w-6 h-6" />
+                                    Things to Do
+                                </Link>
+                                <Link
+                                    href="/restaurants"
+                                    className="flex flex-col items-center gap-2 min-w-[100px] text-[16px] font-medium hover:underline transition-all"
+                                >
+                                    <Utensils className="w-6 h-6" />
+                                    Restaurants
+                                </Link>
+                                <Link
+                                    href="/flights"
+                                    className="flex flex-col items-center gap-2 min-w-[100px] text-[16px] font-medium hover:underline transition-all"
+                                >
+                                    <Plane className="w-6 h-6" />
+                                    Flights
+                                </Link>
+                                <Link
+                                    href="/vacation-rentals"
+                                    className="flex flex-col items-center gap-2 min-w-[100px] text-[16px] font-medium hover:underline transition-all"
+                                >
+                                    <House className="w-6 h-6" />
+                                    Vacation Rentals
+                                </Link>
+                            </nav>
 
-                                    <div className="relative w-full max-w-2xl mt-4">
-                                        <div className="flex items-center w-full rounded-full border shadow-sm px-6 py-4 bg-white">
-                                            <Search className="text-gray-400 w-6 h-6" />
-                                            <input
-                                                type="text"
-                                                placeholder="Places to go, things to do, hotels..."
-                                                className="flex-1 border-none focus:outline-none text-gray-700 ml-4 text-lg font-poppins"
-                                            />
-                                            <Button className="ml-4 bg-green-400 text-black hover:bg-green-500 rounded-full px-7 py-1 font-poppins">
-                                                Search
-                                            </Button>
-                                        </div>
-                                    </div>
+                            <div className="relative max-w-3xl mx-auto">
+                                <div className="flex items-center h-14 w-full rounded-full border bg-background px-4 shadow-sm">
+                                    <Search className="w-5 h-5 text-muted-foreground mr-2 flex-shrink-0" />
+                                    <input
+                                        type="text"
+                                        placeholder="Places to go, things to do, hotels..."
+                                        className="flex-1 bg-transparent outline-none"
+                                    />
+                                    <Button className="rounded-full bg-emerald-400 hover:bg-emerald-500 text-background ml-2">Search</Button>
                                 </div>
                             </div>
                         </div>
+
                     )}
                 </div>
             ) : (

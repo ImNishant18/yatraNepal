@@ -1,13 +1,19 @@
-import HomeTouristGuide from "@/components/Home/Home_tourist_guide/page";
-import { HotelsInformation } from "@/components/Home/Hotels_information/page";
-import ImageSlider from "@/components/Home/Image Slider/page";
+import Header from "@/components/header";
+import HomeTouristGuide from "@/components/tourist_guide";
+import ImageSlider from "@/components/image_slider";
+import HotelBanner from "@/components/hotel_banner";
 
 export default function Home() {
   return (
     <div>
-      <ImageSlider />
+      <Header />
+      <div className="pt-[200px] md:pt-[240px] pb-8">
+        <ImageSlider />
+      </div>
       <HomeTouristGuide />
-      <HotelsInformation />
+      <div className="bg-gray-100 py-8">
+        <HotelBanner />
+      </div>
     </div>
   );
 }

@@ -2,8 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import "./style.css";
-
+import Link from "next/link";
 export default function TouristGuideCard() {
     return (
         <div className="max-w-6xl mx-auto p-4">
@@ -36,11 +35,8 @@ export default function TouristGuideCard() {
                                 </p>
                             </div>
                             <div className="flex md:items-center flex-shrink-0">
-                                <Button
-                                    variant="outline"
-                                    className="rounded-full px-6 border-2 border-[#FF5733] text-[#FF5733] hover:bg-[#FF5733] hover:text-white"
-                                >
-                                    Learn More
+                                <Button asChild variant="outline" className="rounded-full px-6 border-2 border-[#88E788] text-[#000] hover:bg-[#88E788] hover:text-white">
+                                    <Link href="/tourist-guide">Learn More</Link>
                                 </Button>
                             </div>
                         </div>

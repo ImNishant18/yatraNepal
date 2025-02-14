@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
+import "@/components/All CSS/image_slider.css"
 const images = [
     "/images/1.png",
     "/images/2.png",

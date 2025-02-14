@@ -1,8 +1,7 @@
 "use client"
-
-import { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import "./style.css"
+import Image from "next/image"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import "@/components/All CSS/hotel_banner.css"
 
 const hotels = [
     {
@@ -91,53 +90,41 @@ const hotels = [
     },
 ]
 
-export const HotelsInformation = () => {
-    const [currentPage, setCurrentPage] = useState(0)
-    const hotelsPerPage = 4
-    const totalPages = Math.ceil(hotels.length / hotelsPerPage)
-
-    const nextPage = () => {
-        setCurrentPage((prev) => (prev + 1) % totalPages)
-    }
-    const previousPage = () => {
-        setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages)
-    }
-
-    const startIndex = currentPage * hotelsPerPage
-    const visibleHotels = hotels.slice(startIndex, startIndex + hotelsPerPage)
-
+export default function HotelsInformation() {
     return (
         <div className="container">
-            <div className="text">
-                <h1>Enjoy a Luxury Stay with us. </h1>
+            <div className="header">
+                <h1>Enjoy a Luxury Stay with us.</h1>
                 <p>Book this exclusive collection of luxury hotels and enjoy a luxurious stay.</p>
             </div>
 
-            <div className="content-wrapper">
-                <button onClick={previousPage} className="nav-button prev">
-                    <ChevronLeft className="h-6 w-6" />
-                </button>
-
-                <div className="wrapper">
-                    {visibleHotels.map((hotel) => (
-                        <div key={hotel.id} className="card">
-                            <img src={hotel.image || "/placeholder.svg"} alt={`${hotel.name}`} />
-                            <div className="info">
-                                <h1>{hotel.name}</h1>
-                                <p>{hotel.location}</p>
-                                <p>Price: Rs.{hotel.price} per night</p>
-                                <a href="#">Book Now</a>
+            <Carousel
+                opts={{
+                    align: "start",
+                    loop: true,
+                }}
+                className="carousel"
+            >
+                <CarouselContent className="carousel-content">
+                    {hotels.map((hotel) => (
+                        <CarouselItem key={hotel.id} className="carousel-item">
+                            <div className="hotel-card">
+                                <div className="image-container">
+                                    <Image src={hotel.image || "/placeholder.svg"} alt={hotel.name} fill className="hotel-image" />
+                                    <div className="overlay">
+                                        <h3 className="hotel-name">{hotel.name}</h3>
+                                        <p className="hotel-location">{hotel.location}</p>
+                                        <p className="hotel-price">Price: Rs.{hotel.price} per night</p>
+                                        <button className="book-button">Book Now</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </CarouselItem>
                     ))}
-                </div>
-
-                <button onClick={nextPage} className="nav-button next">
-                    <ChevronRight className="h-6 w-6" />
-                </button>
-            </div>
+                </CarouselContent>
+                <CarouselPrevious className="carousel-prev" />
+                <CarouselNext className="carousel-next" />
+            </Carousel>
         </div>
     )
 }
-
-export default HotelsInformation;
