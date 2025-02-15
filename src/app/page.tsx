@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import HomeTouristGuide from "@/components/tourist_guide";
 import ImageSlider from "@/components/image_slider";
 import HotelBanner from "@/components/hotel_banner";
-
+import MoneyExchange from "@/components/moneyexchange";
 export default function Home() {
   return (
     <div>
@@ -13,6 +13,7 @@ export default function Home() {
       <HomeTouristGuide />
       <div className="bg-gray-100 py-8">
         <HotelBanner />
+        <MoneyExchange />
       </div>
     </div>
   );
