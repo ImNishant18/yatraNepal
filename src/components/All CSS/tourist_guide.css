@@ -1,0 +1,115 @@
+.tourist-guide-container {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.tourist-guide-card {
+    background-color: #F8F3FA;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.tourist-guide-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.tourist-guide-image-container {
+    width: 100%;
+    height: 12rem;
+    position: relative;
+    flex-shrink: 0;
+    padding: 1rem;
+}
+
+.tourist-guide-image {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.tourist-guide-info {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tourist-guide-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.tourist-guide-tag-container {
+    display: inline-block;
+}
+
+.tourist-guide-tag {
+    background-color: #E8E8E8;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.tourist-guide-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tourist-guide-description {
+    color: #374151;
+}
+
+.tourist-guide-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tourist-guide-button {
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #88E788;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tourist-guide-button:hover {
+    background-color: #88E788;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .tourist-guide-content {
+        flex-direction: row;
+    }
+
+    .tourist-guide-image-container {
+        width: 18rem;
+        height: auto;
+    }
+
+    .tourist-guide-info {
+        padding: 1.5rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .tourist-guide-text {
+        flex: 1;
+    }
+
+    .tourist-guide-title {
+        font-size: 1.875rem;
+    }
+
+    .tourist-guide-button-container {
+        margin-top: 0;
+        align-self: center;
+    }
+}

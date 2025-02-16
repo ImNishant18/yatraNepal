@@ -31,11 +31,26 @@
     scroll-behavior: smooth;
     gap: 1rem;
     padding-bottom: 1.5rem;
-    scrollbar-width: none;
     -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .money-exchange-carousel::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
     display: none;
 }
 

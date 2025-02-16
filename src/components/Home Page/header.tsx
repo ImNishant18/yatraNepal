@@ -3,7 +3,16 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, Home, Bed, Ticket, Utensils, Plane, HomeIcon as House, Globe } from "lucide-react"
+import {
+    Search,
+    Home,
+    Bed,
+    Ticket,
+    Utensils,
+    Plane,
+    HomeIcon as House,
+    Globe,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -44,7 +53,9 @@ export default function Header() {
                                     className="h-[42px] w-auto"
                                 />
                                 {!isScrolled && (
-                                    <span className="text-xl font-poppins font-bold">YatraNepal</span>
+                                    <span className="text-xl font-poppins font-bold">
+                                        YatraNepal
+                                    </span>
                                 )}
                             </Link>
 
@@ -206,7 +217,9 @@ export default function Header() {
                     {/* Secondary Navigation (only when not scrolled) */}
                     {!isScrolled && (
                         <div className="w-full max-w-6xl mx-auto px-4 py-8 space-y-8">
-                            <h1 className="text-7xl font-bold text-center font-poppins mb-8">Where to?</h1>
+                            <h1 className="text-7xl font-bold text-center font-poppins mb-8">
+                                Where to?
+                            </h1>
 
                             <nav className="flex flex-wrap justify-center gap-8">
                                 <button className="flex flex-col items-center gap-2 min-w-[100px] text-[16px] font-medium hover:underline transition-all">
@@ -258,11 +271,12 @@ export default function Header() {
                                         placeholder="Places to go, things to do, hotels..."
                                         className="flex-1 bg-transparent outline-none"
                                     />
-                                    <Button className="rounded-full bg-emerald-400 hover:bg-emerald-500 text-background ml-2">Search</Button>
+                                    <Button className="rounded-full bg-emerald-400 hover:bg-emerald-500 text-background ml-2">
+                                        Search
+                                    </Button>
                                 </div>
                             </div>
                         </div>
-
                     )}
                 </div>
             ) : (
@@ -272,9 +286,20 @@ export default function Header() {
                         {/* Top Bar */}
                         <div className="flex items-center justify-between h-[76px] font-poppins text-gray-700">
                             <div className="flex items-center gap-8">
-                                <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-                                    <Image src="/logo.png" alt="YatraNepal" width={188} height={42} className="h-[42px] w-auto" />
-                                    <p className="text-[19px] font-bold font-poppins">YatraNepal</p>
+                                <Link
+                                    href="/"
+                                    className="flex items-center gap-2 flex-shrink-0"
+                                >
+                                    <Image
+                                        src="/logo.png"
+                                        alt="YatraNepal"
+                                        width={188}
+                                        height={42}
+                                        className="h-[42px] w-auto"
+                                    />
+                                    <p className="text-[19px] font-bold font-poppins">
+                                        YatraNepal
+                                    </p>
                                 </Link>
                                 <div className="relative w-full max-w-15">
                                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 font-poppins text-gray-400 w-5 h-5" />
