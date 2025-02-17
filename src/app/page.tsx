@@ -4,6 +4,8 @@ import ImageSlider from "@/components/Home Page/image_slider";
 import HotelBanner from "@/components/Home Page/hotel_banner";
 import MoneyExchange from "@/components/Home Page/moneyexchange";
 import PlaceBanner from "@/components/Home Page/place_banner";
+import PromotionalCard from "@/components/Home Page/promotional-card";
+import MoreExplore from "@/components/Home Page/more-explore";
 export default function Home() {
   return (
     <div>
@@ -16,6 +18,8 @@ export default function Home() {
       <div className="bg-gray-100 py-8">
         <HotelBanner />
         <MoneyExchange />
+        <PromotionalCard />
+        <MoreExplore />
       </div>
     </div>
   );

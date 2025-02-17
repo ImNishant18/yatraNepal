@@ -1,0 +1,112 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.banner-1 {
+    background-color: #f8f5ff;
+}
+
+.banner-2 {
+    background-color: #faf7f5;
+}
+
+.banner-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    flex-shrink: 0;
+}
+
+.image {
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.label {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #111827;
+}
+
+.description {
+    color: #4b5563;
+    margin: 0;
+}
+
+.button {
+    white-space: nowrap;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    border: 1px solid #d1d5db;
+    color: #111827;
+    background-color: rgb(109, 189, 221);
+    transition: border-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: lightgreen;
+    border-color: lightgreen;
+}
+.button-text{
+    color: #111827;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        padding: 1.5rem;
+    }
+
+    .image-wrapper {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}

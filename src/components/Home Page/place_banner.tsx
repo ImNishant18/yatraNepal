@@ -47,6 +47,7 @@ const destinations = [
         image: "/images/8.png",
     },
 ]
+
 export default function PlaceBanner() {
     const [currentIndex, setCurrentIndex] = useState(0)
     const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -101,9 +102,7 @@ export default function PlaceBanner() {
                             <div className={styles.cardOverlay}>
                                 <div className={styles.contentWrapper}>
                                     <h2 className={styles.cardTitle}>{destination.name}</h2>
-                                    <button className={styles.exploreButton}>
-                                        Explore Now
-                                    </button>
+                                    <button className={styles.exploreButton}>Explore Now</button>
                                 </div>
                             </div>
                         </div>
@@ -121,3 +120,4 @@ export default function PlaceBanner() {
         </div>
     )
 }
+
