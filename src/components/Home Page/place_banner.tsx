@@ -120,4 +120,3 @@ export default function PlaceBanner() {
         </div>
     )
 }
-

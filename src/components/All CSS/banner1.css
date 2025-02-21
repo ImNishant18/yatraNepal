@@ -1,0 +1,105 @@
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    padding: 2rem;
+    max-width: 1090px;
+    margin: 1rem auto;
+    width: 100%;
+    min-height: 160px;
+}
+
+.banner-1 {
+    background-color: #f8f5ff;
+}
+
+.banner-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 2rem;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+}
+
+.image {
+    border-radius: 0.75rem;
+    object-fit: cover;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.label {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #4b5563;
+    background-color: #e5e7eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.description {
+    color: #4b5563;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.button {
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    border: 1.5px solid #43d3e6;
+    color: #52dee9;
+    background-color: #52dee9;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #33e787;
+    border-color: #9ca3af;
+}
+
+.button-text {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 1.5rem;
+    }
+
+    .image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .banner-content {
+        gap: 1.5rem;
+    }
+}
