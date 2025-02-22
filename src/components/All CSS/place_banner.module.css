@@ -148,19 +148,67 @@
 }
 
 @media (max-width: 1024px) {
+    .carouselContainer {
+        padding-left: 1%;
+    }
+
     .card {
         flex: 0 0 calc(33.333% - 0.75rem);
+    }
+
+    .navButton {
+        width: 2rem;
+        height: 2rem;
+        left: -0.75rem;
+        right: -0.75rem;
+    }
+
+    .navIcon {
+        width: 1rem;
+        height: 1rem;
     }
 }
 
 @media (max-width: 768px) {
+    .carouselContainer {
+        padding-left: 0.5%;
+    }
+
     .card {
         flex: 0 0 calc(50% - 0.5rem);
+    }
+
+    .navButton {
+        width: 1.75rem;
+        height: 1.75rem;
+        left: -0.5rem;
+        right: -0.5rem;
+    }
+
+    .navIcon {
+        width: 0.875rem;
+        height: 0.875rem;
     }
 }
 
 @media (max-width: 480px) {
+    .carouselContainer {
+        padding-left: 0.25%;
+    }
+
     .card {
         flex: 0 0 100%;
+    }
+
+    .navButton {
+        width: 1.5rem;
+        height: 1.5rem;
+        left: -0.25rem;
+        right: -0.25rem;
+    }
+
+    .navIcon {
+        width: 0.75rem;
+        height: 0.75rem;
     }
 }

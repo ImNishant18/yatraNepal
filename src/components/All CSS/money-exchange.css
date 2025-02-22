@@ -1,22 +1,22 @@
 .money-exchange-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 1rem;
 }
 
 .money-exchange-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .money-exchange-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
 
 .money-exchange-subtitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #6b7280;
     align-items: center;
 }
@@ -29,17 +29,13 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 1rem;
-    padding-bottom: 1.5rem;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .money-exchange-carousel::-webkit-scrollbar {
-    width: 0;
-    height: 0;
     display: none;
 }
 
@@ -49,19 +45,18 @@
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-    width: 0;
-    height: 0;
     display: none;
 }
 
 .money-exchange-card {
     flex: 0 0 auto;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     transition: all 0.3s ease;
 }
 
 .money-exchange-card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .money-exchange-card-content {
@@ -70,11 +65,15 @@
 
 .money-exchange-image-wrapper {
     position: relative;
-    height: 400px;
-    width: 300px;
+    height: 0;
+    padding-bottom: 133.33%; /* 4:3 aspect ratio */
+    width: 100%;
 }
 
 .money-exchange-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -89,19 +88,20 @@
     align-items: center;
     justify-content: center;
     color: lightblue;
-    padding: 1.5rem;
+    padding: 1rem;
     transition: all 0.3s ease;
 }
 
 .money-exchange-card-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    text-align: center;
 }
 
 .money-exchange-card-location {
     font-size: 0.875rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     text-align: center;
 }
 
@@ -112,6 +112,7 @@
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     cursor: pointer;
+    font-size: 0.875rem;
 }
 
 .money-exchange-card-button:hover {
@@ -126,8 +127,8 @@
     background-color: rgba(255, 255, 255, 0.8);
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,25 +149,50 @@
 }
 
 .money-exchange-chevron {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
+    .money-exchange-container {
+        padding: 2rem 1rem;
+    }
+
     .money-exchange-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .money-exchange-subtitle {
-        font-size: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .money-exchange-carousel {
+        gap: 1rem;
     }
 
     .money-exchange-card {
-        width: 250px;
+        width: calc(50% - 0.5rem);
     }
 
-    .money-exchange-image-wrapper {
-        height: 350px;
-        width: 250px;
+    .money-exchange-scroll-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .money-exchange-chevron {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .money-exchange-card {
+        width: calc(33.333% - 0.667rem);
+    }
+}
+
+@media (min-width: 1280px) {
+    .money-exchange-container {
+        max-width: 1200px;
     }
 }
