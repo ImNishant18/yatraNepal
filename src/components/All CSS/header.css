@@ -135,10 +135,11 @@
 /* Search Section Styles */
 .header-search-section {
     width: 100%;
-    max-width: 860px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
+
 
 .header-search-title {
     font-size: 4.5rem;
