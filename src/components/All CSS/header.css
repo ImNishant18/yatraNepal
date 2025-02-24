@@ -1,0 +1,397 @@
+.header-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: white;
+}
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-border {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-logo-image {
+    height: 42px;
+    width: auto;
+}
+
+.header-logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.header-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.header-nav-item {
+    position: relative;
+}
+
+.header-nav-button {
+    color: #4b5563;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0 0.5rem;
+}
+
+.header-nav-button:hover {
+    color: #111827;
+}
+
+.header-dropdown {
+    position: absolute;
+    left: 0;
+    margin-top: 0.75rem;
+    width: 14rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    z-index: 50;
+    padding: 1rem;
+}
+
+.header-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    left: 1.25rem;
+    border: 0.5rem solid transparent;
+    border-bottom-color: white;
+}
+
+.header-dropdown-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.header-dropdown-link:hover {
+    background-color: #f3f4f6;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-currency {
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.header-currency-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.header-sign-in {
+    background-color: #18181b;
+    color: white;
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+}
+
+.header-sign-in:hover {
+    background-color: #6b7280;
+}
+
+/* Search Section Styles */
+.header-search-section {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.header-search-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .header-search-title {
+        font-size: 2.5rem;
+    }
+}
+
+.header-search-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .header-search-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: visible;
+    }
+}
+
+.header-search-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 100px;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.header-search-nav-item:hover {
+    text-decoration: underline;
+}
+
+/* Search Input Styles */
+.header-search-bar {
+    position: relative;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.header-search-input-wrapper {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    width: 100%;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    background-color: white;
+    padding: 0 1rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.header-search-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #6b7280;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.header-search-input {
+    flex: 1;
+    background-color: transparent;
+    outline: none;
+}
+
+.header-search-button {
+    border-radius: 9999px;
+    background-color: #34d399;
+    color: white;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.header-search-button:hover {
+    background-color: #10b981;
+}
+
+/* Flight Search Specific Styles */
+.header-flight-search {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .header-flight-search {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+.header-flight-input {
+    position: relative;
+    min-width: 280px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .header-flight-input {
+        width: auto;
+    }
+}
+
+.header-flight-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #9ca3af;
+}
+
+.header-flight-field {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+}
+
+.header-flight-field:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #e5e7eb;
+}
+
+.header-date-button,
+.header-travelers-button {
+    text-align: left;
+    background: none;
+    cursor: pointer;
+}
+
+/* Scrolled Header Styles */
+.header-scrolled {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-scrolled .header-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header-scrolled .header-wrapper {
+        flex-direction: row;
+        height: 76px;
+        padding: 0 1rem;
+    }
+}
+
+.header-logo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .header-logo-section {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+    }
+}
+
+.header-scrolled-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header-scrolled-nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.header-scrolled-link {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111827;
+    text-decoration: none;
+}
+
+.header-scrolled-link:hover {
+    color: #4b5563;
+    text-decoration: underline;
+}
+
+.header-secondary-nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+    .header-secondary-nav {
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1rem 0;
+        border-top: none;
+    }
+}
+
+.header-secondary-link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #111827;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.header-secondary-link:hover {
+    color: #4b5563;
+    text-decoration: underline;
+}
+
+/* Calendar and Travelers Popovers */
+.header-calendar-popover {
+    width: 90vw;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header-calendar-popover {
+        width: 700px;
+        padding: 1.5rem;
+    }
+}
+
+.header-travelers-popover {
+    width: 300px;
+    padding: 1rem;
+}
